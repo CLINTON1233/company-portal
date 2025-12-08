@@ -26,25 +26,22 @@ export default function LandingPage() {
             priority
           />
         </Link> */}
-<Link href="/" className="flex items-center space-x-2">
-  <span className="text-xl font-semibold italic tracking-tight text-white">
-    Company Portal
-  </span>
-</Link>
-
+        <Link href="/" className="flex items-center space-x-2">
+          <span className="text-xl font-semibold italic tracking-tight text-white">
+            Company Portal
+          </span>
+        </Link>
 
         {/* Right Menu */}
         <div className="hidden md:flex items-center space-x-5">
-<Link
-  href="/login"
-  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white 
+          <Link
+            href="/login"
+            className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white 
              rounded-full shadow-lg hover:shadow-xl hover:scale-105 
              transition-all font-semibold tracking-wide"
->
-  Sign in
-</Link>
-
-
+          >
+            Sign in
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,39 +78,36 @@ export default function LandingPage() {
             className="object-cover"
             priority
           />
-<div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/30 to-black/20" />
-
+          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/30 to-black/20" />
         </div>
 
         {/* Content - MODIFIKASI UNTUK POSISI TENGAH */}
-       {/* HERO TEXT – gaya PERSIS seperti kode pertama */}
-<div className="relative w-full max-w-4xl px-6 md:px-16 pt-32 pb-40 text-white text-left">
+        {/* HERO TEXT – gaya PERSIS seperti kode pertama */}
+        <div className="relative w-full max-w-4xl px-6 md:px-16 pt-32 pb-40 text-white text-left">
+          <p className="text-sm md:text-base tracking-[0.25em] uppercase mb-4 text-white/80">
+            IT Portal
+          </p>
 
-  <p className="text-sm md:text-base tracking-[0.25em] uppercase mb-4 text-white/80">
-    IT Portal
-  </p>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-5xl font-semibold leading-tight max-w-xl mb-4">
+            Empower your IT operations with a smarter, unified platform.
+          </h1>
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-xl mb-4">
-   Empower your IT operations with a smarter, unified platform.
-  </h1>
+          <p className="text-sm sm:text-base md:text-base max-w-lg text-white/80 mb-6">
+            Monitor systems, track performance, and streamline operations
+            through an intuitive, fast, and integrated IT management portal.
+          </p>
 
-  <p className="text-sm sm:text-base md:text-lg max-w-lg text-white/80 mb-6">
-  Monitor systems, track performance, and streamline operations through an intuitive, fast, and integrated IT management portal.
-  </p>
-
-  <Link
-    href="/login"
-    className="inline-block bg-blue-800 hover:bg-blue-700 text-white font-semibold px-10 py-3 rounded-full text-base sm:text-lg transition transform hover:scale-105 shadow-lg"
-  >
-    Get Started
-  </Link>
-
-</div>
-
+          <Link
+            href="/login"
+            className="inline-block bg-blue-800 hover:bg-blue-700 text-white font-semibold px-10 py-3 rounded-full text-base sm:text-lg transition transform hover:scale-105 shadow-lg"
+          >
+            Get Started
+          </Link>
+        </div>
 
         {/* FOOTER - TIDAK BERUBAH */}
         <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-white text-sm opacity-80">
-          IT Portal Infrastructure{" "}
+          IT Company Portal{" "}
           {/* <Link
             href="https://seatrium.com"
             target="_blank"

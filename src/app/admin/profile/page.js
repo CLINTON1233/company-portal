@@ -140,7 +140,7 @@ export default function ProfilePage() {
             >
               Applications
             </Link>
-
+       
             <Link
               href="/admin/profile"
               className="hover:text-gray-200 transition text-white"
@@ -199,7 +199,8 @@ export default function ProfilePage() {
                 >
                   Applications
                 </Link>
-
+             
+      
                 <Link
                   href="/admin/profile"
                   className="text-white hover:text-blue-300 transition py-2 font-medium"
@@ -233,7 +234,7 @@ export default function ProfilePage() {
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-3xl font-bold leading-tight text-white mb-2">
               <span className="text-white">Profile</span>{" "}
-              <span className="text-[#8FD9FB]">Superadmin</span>
+              <span className="text-[#8FD9FB]">Admin</span>
             </h1>
             <p className="text-base text-white/80">
               Manage your account information and preferences

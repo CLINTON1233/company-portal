@@ -2,8 +2,8 @@ import { AuthProvider } from "./context/AuthContext";
 import "./globals.css";
 
 export const metadata = {
-  title: "InfraDash - IT Infrastructure Dashboard",
-  description: "IT Infrastructure Dashboard for Seatrium",
+  title: "CompanyPortal",
+  description: "IT Company Portal",
 };
 
 export default function RootLayout({ children }) {

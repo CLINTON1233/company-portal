@@ -260,12 +260,12 @@ export default function SuperAdminDashboardPage() {
             >
               Categories
             </Link>
-            <Link
-              href="/admin/management_users"
-              className="hover:text-gray-200 transition text-white"
-            >
-              Users
-            </Link> */}
+            // <Link
+            //   href="/admin/management_users"
+            //   className="hover:text-gray-200 transition text-white"
+            // >
+            //   Users
+            // </Link> */}
             <Link
               href="/admin/profile"
               className="hover:text-gray-200 transition text-white"

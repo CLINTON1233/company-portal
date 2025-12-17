@@ -36,43 +36,80 @@ export default function LoginPage() {
       const data = await res.json();
       console.log(data);
 
+      // if (data.status === "success") {
+      //   localStorage.setItem("token", data.token);
+      //   const user = data.user;
+
+      //   login({
+      //     id: user.id,
+      //     nama: user.nama,
+      //     email: user.email,
+      //     badge: user.badge || "",
+      //     telp: user.telp || "",
+      //     departemen: user.departemen || "",
+      //     role: user.role,
+      //     token: data.token,
+      //   });
+
+      //   await Swal.fire({
+      //     title: "Login Berhasil",
+      //     text: `Selamat datang ${user.nama}!`,
+      //     icon: "success",
+      //     confirmButtonColor: "#1e40af",
+      //   });
+
+      //   if (user.role === "superadmin") {
+      //     router.push("/superadmin/dashboard");
+      //   } else if (user.role === "admin") {
+      //     router.push("/admin/dashboard");
+      //   } else {
+      //     router.push("/dashboard");
+      //   }
+      // } else {
+      //   Swal.fire({
+      //     title: "Login Gagal",
+      //     text: data.message || "Email atau password salah.",
+      //     icon: "error",
+      //     confirmButtonText: "Coba Lagi",
+      //   });
+      // }
+
       if (data.status === "success") {
-        localStorage.setItem("token", data.token);
-        const user = data.user;
+  const user = data.user;
 
-        login({
-          id: user.id,
-          nama: user.nama,
-          email: user.email,
-          badge: user.badge || "",
-          telp: user.telp || "",
-          departemen: user.departemen || "",
-          role: user.role,
-          token: data.token,
-        });
+  login({
+    id: user.id,
+    nama: user.nama,
+    email: user.email,
+    badge: user.badge || "",
+    telp: user.telp || "",
+    departemen: user.departemen || "",
+    role: user.role,
+  });
 
-        await Swal.fire({
-          title: "Login Berhasil",
-          text: `Selamat datang ${user.nama}!`,
-          icon: "success",
-          confirmButtonColor: "#1e40af",
-        });
+  await Swal.fire({
+    title: "Login Berhasil",
+    text: `Selamat datang ${user.nama}!`,
+    icon: "success",
+    confirmButtonColor: "#1e40af",
+  });
 
-        if (user.role === "superadmin") {
-          router.push("/superadmin/dashboard");
-        } else if (user.role === "admin") {
-          router.push("/admin/dashboard");
-        } else {
-          router.push("/dashboard");
-        }
-      } else {
-        Swal.fire({
-          title: "Login Gagal",
-          text: data.message || "Email atau password salah.",
-          icon: "error",
-          confirmButtonText: "Coba Lagi",
-        });
-      }
+  if (user.role === "superadmin") {
+    router.push("/superadmin/dashboard");
+  } else if (user.role === "admin") {
+    router.push("/admin/dashboard");
+  } else {
+    router.push("/dashboard");
+  }
+} else {
+  Swal.fire({
+    title: "Login Gagal",
+    text: data.message || "Email atau password salah.",
+    icon: "error",
+    confirmButtonText: "Coba Lagi",
+  });
+}
+
     } catch (err) {
       console.error(err);
       Swal.fire({

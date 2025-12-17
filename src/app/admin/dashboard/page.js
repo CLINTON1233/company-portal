@@ -489,7 +489,7 @@ export default function SuperAdminDashboardPage() {
                       </div>
 
                       {/* Click Handler */}
-                      <div
+                      {/* <div
                         className="absolute inset-0 z-0 cursor-pointer"
                         onClick={() => {
                           const token = localStorage.getItem("token");
@@ -521,7 +521,7 @@ export default function SuperAdminDashboardPage() {
                             }
                           }
                         }}
-                      />
+                      /> */}
                     </div>
                   ))}
                 </div>

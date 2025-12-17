@@ -23,27 +23,43 @@ export function AuthProvider({ children }) {
   }, [pathname, loading]);
 
   const checkAuth = () => {
-    try {
-      const storedUser = localStorage.getItem("user");
-      const storedToken = localStorage.getItem("token");
+  try {
+    const storedUser = localStorage.getItem("user");
 
-      if (storedUser) {
-        const userObj = JSON.parse(storedUser);
-
-        // jika token ada, tambahkan ke user
-        if (storedToken) {
-          userObj.token = storedToken;
-        }
-
-        setUser(userObj);
-      }
-    } catch (error) {
-      console.error("Error checking auth:", error);
-      setUser(null);
-    } finally {
-      setLoading(false);
+    if (storedUser) {
+      const userObj = JSON.parse(storedUser);
+      setUser(userObj);
     }
-  };
+  } catch (error) {
+    console.error("Error checking auth:", error);
+    setUser(null);
+  } finally {
+    setLoading(false);
+  }
+};
+
+  // const checkAuth = () => {
+  //   try {
+  //     const storedUser = localStorage.getItem("user");
+  //     // const storedToken = localStorage.getItem("token");
+
+  //     if (storedUser) {
+  //       const userObj = JSON.parse(storedUser);
+
+  //       // jika token ada, tambahkan ke user
+  //       if (storedToken) {
+  //         userObj.token = storedToken;
+  //       }
+
+  //       setUser(userObj);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error checking auth:", error);
+  //     setUser(null);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const checkRouteAccess = () => {
     // Routes yang boleh diakses tanpa login
@@ -103,13 +119,13 @@ export function AuthProvider({ children }) {
     setUser(userData);
 
     localStorage.setItem("user", JSON.stringify(userData));
-    localStorage.setItem("token", userData.token); // Pastikan token disimpan
+    // localStorage.setItem("token", userData.token); // Pastikan token disimpan
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
-    localStorage.removeItem("token"); // TAMBAHKAN INI
+    // localStorage.removeItem("token"); // TAMBAHKAN INI
     sessionStorage.removeItem("loginSuccessShown");
     router.push("/login");
   };

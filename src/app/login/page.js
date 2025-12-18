@@ -145,12 +145,20 @@ export default function LoginPage() {
       {/* Header - Gaya Landing Page */}
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 md:px-10 py-5">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        {/* <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-semibold italic tracking-tight text-white">
             Company Portal
           </span>
-        </Link>
-
+        </Link> */}
+   <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="Company Logo"
+              width={100}
+              height={40}
+              className="object-contain w-28 sm:w-32"
+            />
+          </Link>
         {/* Back to Home Button - Hanya di desktop */}
         <div className="hidden md:flex items-center space-x-5">
           <Link

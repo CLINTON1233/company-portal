@@ -120,12 +120,20 @@ export default function ProfilePage() {
         {/* HEADER */}
         <header className="flex items-center justify-between px-4 py-4 border-b border-white/30 text-white">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          {/* <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-semibold italic tracking-tight text-white">
               Company Portal
             </span>
+          </Link> */}
+  <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="Company Logo"
+              width={100}
+              height={40}
+              className="object-contain w-28 sm:w-32"
+            />
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium">
             <Link
